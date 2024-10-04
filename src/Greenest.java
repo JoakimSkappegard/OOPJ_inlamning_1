@@ -24,11 +24,11 @@ public class Greenest {
                 for (int i = 0; i < klientLista.size(); i++) {
                     if(klientLista.get(i).getVaxtName().equals(sokNamn.toUpperCase().trim())){
                         vaxtHittad = true;
-                        if(true==klientLista.get(i).getGastState()){
+                        if(klientLista.get(i).getGastState()){
                             System.out.println("Växten \"" + sokNamn.toUpperCase().trim() + "\"  behöver " + klientLista.get(i).behov() + " liter " + klientLista.get(i).vattskaBehov().vattska);
                             JOptionPane.showMessageDialog(null,"Växten \"" + sokNamn.toUpperCase().trim() + "\"  behöver " + klientLista.get(i).behov() + " liter " + klientLista.get(i).vattskaBehov().vattska);
                         }
-                        else if (false==klientLista.get(i).getGastState()) {
+                        else if (!klientLista.get(i).getGastState()) {
                             System.out.println(sokNamn.toUpperCase().trim() + " är för närvarande inte registrerad som boende på hotellet.\nVill du lägga in " + sokNamn.toUpperCase().trim() +" som aktiv gäst i systemet?");
                             int val = JOptionPane.showConfirmDialog(null, sokNamn.toUpperCase().trim() + " är för närvarande inte registrerad som boende på hotellet.\nVill du lägga in " + sokNamn.toUpperCase().trim() +" som aktiv gäst i systemet?", "",JOptionPane.YES_NO_OPTION);
                             if(val==JOptionPane.YES_OPTION){
@@ -41,7 +41,7 @@ public class Greenest {
                             }
                         }
                     }
-                    else if (i==klientLista.size()-1 && vaxtHittad==false) {
+                    else if (i==klientLista.size()-1 && !vaxtHittad) {
                         System.out.println("Växten du sökte vid namn \"" + sokNamn.toUpperCase().trim() + "\" kunde inte hittas i programmet.\nDetta kan antingen bero på att fel namn angetts eller så saknas det i registret.\nOm ni inte kan hitta plantan ni söker så behöver en:\nPalm " + exempelPalm.behov() + " liter " + exempelPalm.vattskaBehov().vattska + " per meter.\nKaktus " + exempelKaktus.behov() + " liter " + exempelKaktus.vattskaBehov().vattska + ". OBS oavsett längd på planta!\nKöttätandeväxt " + exempelKottatandevaxt.behov() + " liter " + exempelKottatandevaxt.vattskaBehov().vattska + " per meter.");
                         JOptionPane.showMessageDialog(null, "Växten du sökte vid namn \"" + sokNamn.toUpperCase().trim() + "\" kunde inte hittas i programmet.\nDetta kan antingen bero på att fel namn angetts eller så saknas det i registret.\nOm ni inte kan hitta plantan ni söker så behöver en:\nPalm " + exempelPalm.behov() + " liter " + exempelPalm.vattskaBehov().vattska + " per meter.\nKaktus " + exempelKaktus.behov() + " liter " + exempelKaktus.vattskaBehov().vattska + ". OBS oavsett längd på planta!\nKöttätandeväxt " + exempelKottatandevaxt.behov() + " liter " + exempelKottatandevaxt.vattskaBehov().vattska + " per meter.");
                     }
