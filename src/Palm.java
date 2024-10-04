@@ -6,7 +6,7 @@ public class Palm extends Vaxt{
 
     private boolean gastState;
 
-    protected Vattskor vattska= Vattskor.KRANVATTEN;
+    private Vattskor vattska= Vattskor.KRANVATTEN;
 
 
     @Override

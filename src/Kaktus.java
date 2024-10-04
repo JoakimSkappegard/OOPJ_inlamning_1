@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class Kaktus extends Vaxt{
 
-    protected Vattskor vattska= Vattskor.MINERALVATTEN;
+    private Vattskor vattska= Vattskor.MINERALVATTEN;
 
     private static final double kaktusBehovDag = 0.2;
 
