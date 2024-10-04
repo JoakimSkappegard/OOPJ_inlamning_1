@@ -3,13 +3,13 @@
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class Main {
+public class Greenest {
     private ArrayList<Vaxt> klientLista;
     private Kaktus exempelKaktus = new Kaktus(1.0, "Exempelkaktus9999999", false);
     private Palm exempelPalm = new Palm(1.0, "ExempelPalm9999999", false);
     private Kottatandevaxt exempelKottatandevaxt = new Kottatandevaxt(1.,"ExempelKöttätandeväxt9999999", false);
 
-    Main() {
+    Greenest() {
         klientLista = new ArrayList<>();
         korDemo();
 
@@ -46,7 +46,7 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        Main main = new Main();
+        Greenest main = new Greenest();
     }
     public void korDemo(){
         int confirmDemo = JOptionPane.showConfirmDialog(null, "Vill du ladda in demoprogram.", "", JOptionPane.YES_NO_OPTION);
@@ -62,100 +62,5 @@ public class Main {
         }
     }
 }
-        /*
-        Två val:
-        vilken växt ska få vätska?
 
-        lägg till växt.
-
-        VVSFV
-            ska läsa in växtnamn
-            (hade även varit snyggt att lägga till så att man kan välja växt ur lista, överkurs)
-
-                ska pressentera överst tydligt vängd vatten/mineral/protein växten ska ha.
-                Jag vill även att växtens övriga information presenteras under
-
-                snyggare om detta loopar så att man kan komma till väljväxt/huvudmeny igen
-
-         Lägg till växt
-            behöver ta in namn, höjd och typ av växt.
-            !! kan man inplementera polymorfism här??
-
-            behöver vara säkert vid felaktig inmatning.
-
-         Programet behöver på något sätt lägga in objekten i en lista som man sedan kan söka av för att hitta all info.
-         Bör den listan ligga i main? eller ha en egen klass?
-         snyggast hade varit ifall de låg i en fil utanför programet och sparades/lästes av (istället för en databank) men det är lite överkurs och jag har inte riktigt tid.
-
-         Behöver kolla upp:
-         ENUMS
-
-         Behöver dubbelkolla:
-         Interface
-         Polymorfism
-
-         Klasser
-
-         växter tänker jag ska vara en abstrakt klass
-         den ska innehålla längden på växten för det är en variabel som bör vara gemensam för alla växter.
-         konstructor
-         metod för att hämnta variabel
-         metod för att sätta variabel
-
-         pal
-         variabel för vatten/längd
-         metod för att räkna ut vatten behov
-         metod hämnta vatten/längd
-         metod sätta vatten/längnd
-
-         kakt
-         var minvatt/dag
-         hämnta minvat/dag
-         sättaminvatt/dag
-
-         kottvaxt
-         var protdryck/lägnd
-         metod räkna behov
-         metod hämnta
-         metod sätta
-
-         inteface farlig
-         bool gifitg
-         bool taggig
-         bool övrig fara
-         string giftig
-         string taggig
-         string övrig
-
-
-
-         */
-
-
-/*
-vilken växt (tar namn)
-    kollar i lista
-    om den finns
-
-    om ja
-        out växtnamn+behov
-
-    om nej
-        växt ej på hotell
-
-    om cancle
-        hantera null
-
-
-******************************************************************************************************************************
-lagra växter i en fil (databas)
-
-hantera samma namn
-
-bara se närvarande växter
-
-To do list
-
-
- */
 
